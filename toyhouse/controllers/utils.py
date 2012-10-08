@@ -124,3 +124,20 @@ class ForumHandler(BaseHandler):
       self.templateValue['email'] = user.email()
       self.templateValue['logoutUrl'] = users.create_logout_url('/')
     self.render('forum.html')
+
+"""
+Handler for announcements page - Added by Pan Tao pantaovay@gmail.com
+"""
+
+class AnnouncementsHandler(BaseHandler):
+
+  def get(self):
+    navbar = {'announcements':True}
+    self.templateValue['navbar'] = navbar
+    user = users.get_current_user()
+    if user:
+      self.templateValue['email'] = user.email()
+      self.templateValue['logoutUrl'] = users.create_logout_url('/')
+    self.render('announcements.html')
+
+

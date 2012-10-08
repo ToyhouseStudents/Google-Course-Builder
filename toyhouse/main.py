@@ -27,7 +27,8 @@ urls = [
   ('/activity', lessons.ActivityHandler),
   ('/assessment', lessons.AssessmentHandler),
   ('/answer', lessons.AnswerHandler),
-  ('/forum', utils.ForumHandler)
+  ('/forum', utils.ForumHandler),
+  ('/announcements', utils.AnnouncementsHandler)
   ]
 
 app = webapp2.WSGIApplication(urls, debug=True)
